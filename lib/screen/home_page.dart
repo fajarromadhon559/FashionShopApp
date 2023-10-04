@@ -4,14 +4,9 @@ import 'package:sub_flutter/widget/bottom_widget.dart';
 import 'package:sub_flutter/widget/widget_collection.dart';
 import 'package:sub_flutter/widget/widget_other_fashion.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,17 +22,7 @@ class _HomePageState extends State<HomePage> {
                 IconButton(onPressed: () {}, icon: const Icon(Icons.local_mall))
               ],
             ),
-            body: const Dashboard()
-            //     LayoutBuilder(
-            //       builder: (BuildContext context, BoxConstraints constraints) {
-            //   if (constraints.maxWidth <= 467) {
-            //     return Dashboard();
-            //   } else {
-            //     return Dashboard();
-            //   }
-            // },
-            //     )
-            ));
+            body: const Dashboard()));
   }
 }
 
