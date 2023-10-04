@@ -3,7 +3,7 @@ import 'package:sub_flutter/screen/transaction_layout.dart';
 import 'package:sub_flutter/widget/bottom_widget.dart';
 import 'package:sub_flutter/widget/selected_button.dart';
 import 'package:sub_flutter/widget/widget_match_item.dart';
-import 'package:sub_flutter/widget/widget_similar_shop.dart';
+import 'package:sub_flutter/widget/widget_other_fashion.dart';
 
 class ShopLayout extends StatelessWidget {
   const ShopLayout({super.key});
@@ -30,7 +30,8 @@ class ShopLayout extends StatelessWidget {
           Container(
               padding: const EdgeInsets.all(8.0),
               height: 500,
-              child: Image.asset('images/6.jpg')),
+              child: Image.network(
+                  'https://images.unsplash.com/photo-1632573801508-4ede5a46c4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1969&q=80')),
           const Padding(
             padding: EdgeInsets.only(left: 8.0),
             child: Text(
@@ -99,7 +100,7 @@ class ShopLayout extends StatelessWidget {
                   height: 50,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
                         return const TransactionLayout();
                       }));
@@ -160,9 +161,7 @@ class ShopLayout extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          const SizedBox(
-            child: SimilarItem(),
-          ),
+          const SizedBox(child: OtherFashionWidget()),
           const SizedBox(
             child: BottomWidget(),
           )

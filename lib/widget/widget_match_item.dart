@@ -12,33 +12,30 @@ class MatchItemListWidget extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           final DataMatchList fashion = dataMatch[index];
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  fashion.imageAsset,
-                  height: 200,
-                  width: 150,
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.network(
+                fashion.imageUrl,
+                width: 150,
+                height: 200,
+              ),
+              Text(
+                fashion.name,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
                 ),
-                Text(
-                  fashion.name,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 16,
+              ),
+              Text(
+                fashion.price,
+                style: const TextStyle(
+                    fontSize: 14,
                     fontWeight: FontWeight.w400,
-                  ),
-                ),
-                Text(
-                  fashion.price,
-                  style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black38),
-                )
-              ],
-            ),
+                    color: Colors.black38),
+              )
+            ],
           );
         },
         itemCount: dataMatch.length,

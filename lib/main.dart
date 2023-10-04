@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sub_flutter/screen/home_page.dart';
 import 'package:sub_flutter/screen/shop_layout.dart';
 import 'package:sub_flutter/screen/splash_screen.dart';
 

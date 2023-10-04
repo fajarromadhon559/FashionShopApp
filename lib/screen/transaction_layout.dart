@@ -45,7 +45,7 @@ class TransactionLayout extends StatelessWidget {
                       color: Colors.brown),
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 340,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 40),

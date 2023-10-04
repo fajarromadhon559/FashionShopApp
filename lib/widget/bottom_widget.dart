@@ -12,7 +12,8 @@ class BottomWidget extends StatelessWidget {
           height: 330,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: const AssetImage('images/bg.jpg'),
+                image: const NetworkImage(
+                    'https://images.unsplash.com/photo-1584517900924-03df8d8369a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                     Colors.black.withOpacity(0.8), BlendMode.darken)),

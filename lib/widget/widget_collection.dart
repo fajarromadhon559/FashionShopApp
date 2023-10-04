@@ -17,10 +17,10 @@ class CollectionWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  fashion.imageAsset,
-                  height: 200,
-                  width: 150,
+                Image.network(
+                  fashion.imageUrl,
+                  height: 170,
+                  width: 140,
                 ),
                 Text(
                   fashion.name,
